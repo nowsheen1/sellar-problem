@@ -1,0 +1,11 @@
+function y=sub_sys_1_coupling_solve(x,u01)
+fun = @eqn;
+
+options = optimoptions('fsolve','Display','none');
+y = fsolve(fun,u01,options);
+
+ function f=eqn(coupling)
+  f=coupling-(x(1)^2+x(2)+x(3)-0.2*u01);
+  
+ end
+end

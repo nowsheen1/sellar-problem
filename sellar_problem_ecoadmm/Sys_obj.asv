@@ -1,0 +1,9 @@
+function f= Sys_obj(x)
+global count_sys
+count_sys=count_sys+1;
+y1=  Sub_system_1_output(1)^2+Sub_system_1_output(2)+Sub_system_1_output(3)-0.2*Sub_system_1_output(4);
+y1=Sub_system_1_output(1);
+y2=Sub_system_1_output(2);
+
+f=x(2)^2+x(3)+y1+exp(-y2);
+end
